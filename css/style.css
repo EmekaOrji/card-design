@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: #ff000066;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: clamp(7px, 1rem, 1.18vw);
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 50%;
+  min-width: 300px;
+  aspect-ratio: 2 / 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2em;
+  padding: 1.8em;
+  box-shadow: 32px 32px 64px #ff000066;
+  user-select: all;
+  -webkit-user-select: all;
+  transition: all 150ms linear;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: all 300ms cubic-bezier(.28,1.33,0,1.23);
+}
+.card__name {
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.card__content {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.card__description {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* .card__company-name {} */
+.card__company-info {
+  height: 75%;
+}
+.card__logo {
+  width: 30%;
+  height: 100%;
+  align-self: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.card__logo img {
+  width: 100%;
+  height: 100%;
+}
